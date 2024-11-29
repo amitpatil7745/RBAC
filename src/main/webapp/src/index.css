@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+body {
+  @apply font-sans antialiased text-gray-900 bg-gray-100;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 bg-gray-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-500 rounded-full;
+}
+
+/* Global focus styles */
+*:focus {
+  @apply outline-none ring-2 ring-indigo-500 ring-opacity-50;
+}
+
+/* Button hover and transition effects */
+.btn {
+  @apply transition duration-300 ease-in-out transform hover:scale-105;
+}
+
+/* Form input styles */
+.form-input {
+  @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+         focus:outline-none focus:ring-indigo-500 focus:border-indigo-500;
+}
+
+/* Card shadow and hover effect */
+.card {
+  @apply bg-white shadow-md rounded-lg hover:shadow-lg transition-shadow duration-300;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive typography */
+h1 {
+  @apply text-4xl md:text-5xl font-bold;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-semibold;
+}
+
+/* Custom utility classes */
+.text-gradient {
+  @apply bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text;
+}
